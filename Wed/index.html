@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>password door lock</title>
+    <title>Password Door Lock Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* ตั้งค่าสไตล์พื้นฐาน */
+        /* Basic styles */
         
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             color: #f1f5f9;
             background: linear-gradient(135deg, #0f172a, #1e293b);
             display: flex;
@@ -19,12 +20,13 @@
             margin: 0;
             padding: 20px;
             position: relative;
+            overflow-y: auto;
         }
         
         .container {
             max-width: 800px;
             width: 100%;
-            padding: 20px;
+            padding: 30px;
             background: rgba(30, 41, 59, 0.85);
             border-radius: 12px;
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
@@ -48,14 +50,13 @@
         }
         
         .card-title {
-            font-size: 1.8em;
+            font-size: 2.5em;
             color: #60a5fa;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             border-bottom: 2px solid #60a5fa;
-            padding-bottom: 5px;
+            padding-bottom: 10px;
             text-align: center;
-            font-size: 2.5em;
         }
         
         .date-author {
@@ -67,10 +68,11 @@
         }
         
         .section-title {
-            font-size: 1.4em;
+            font-size: 1.8em;
             color: #60a5fa;
             font-weight: bold;
             margin-top: 15px;
+            text-align: center;
         }
         
         .section-content {
@@ -89,18 +91,20 @@
                 transform: scale(1);
             }
         }
-        /* ปุ่มด้านบนขวา */
+        /* Sidebar button styles */
         
         .sidebar {
             position: fixed;
             top: 20px;
             right: 20px;
+            display: flex;
+            flex-direction: column;
         }
         
         .sidebar button {
             display: block;
             margin-bottom: 10px;
-            padding: 10px;
+            padding: 10px 15px;
             color: #fff;
             background: #dc2626;
             border: none;
@@ -108,12 +112,25 @@
             cursor: pointer;
             font-weight: bold;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background 0.2s ease, box-shadow 0.2s ease;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            font-size: 1em;
         }
         
         .sidebar button:hover {
             background: #b91c1c;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            transform: translateY(-2px);
+        }
+        /* Image styles */
+        
+        img {
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s;
+        }
+        
+        img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -121,15 +138,15 @@
 <body>
     <div class="container">
         <div class="card" id="header">
-            <div class="card-title">password door lock arduino project</div>
+            <div class="card-title">Password Door Lock Arduino Project</div>
         </div>
 
         <div class="card" id="abstract">
             <div class="section">
                 <div class="section-title">บทคัดย่อ</div>
                 <div class="section-content">
-                    Project นี้เป็นการบูรณาการในการใช้งาน Microcontroller ในรายวิชา PHYSICAL COMPUTING โดยเป็นการทำเป็นHardware สำหรับระบบการทำระบบล็อกประตูโดยใส่รหัส เมื่อใส่รหัสถูกก็จะปลดล็อก เมื่อใส่รหัสผิดก็จะไม่ปลดล็อกโดยการใส่รหัสจะใส่ลงบนอุปกรณ์ Keypad โดยจะมี Micro
-                    Servo เป็นการหมุนเพื่อทำการปลดล็อก และจะมีจอLCDเพื่อแสดงผล
+                    Project นี้เป็นการบูรณาการในการใช้งาน Microcontroller ในรายวิชา PHYSICAL COMPUTING โดยเป็นการทำเป็น Hardware สำหรับระบบการทำระบบล็อกประตูโดยใส่รหัส เมื่อใส่รหัสถูกก็จะปลดล็อก เมื่อใส่รหัสผิดก็จะไม่ปลดล็อกโดยการใส่รหัสจะใส่ลงบนอุปกรณ์ Keypad โดยจะมี Micro
+                    Servo เป็นการหมุนเพื่อทำการปลดล็อก และจะมีจอ LCD เพื่อแสดงผล
                 </div>
             </div>
         </div>
@@ -139,20 +156,20 @@
                 <div class="section-title">อุปกรณ์</div>
                 <div class="section-content">
                     <figure>
-                        <figcaption>1.LCD Module</figcaption>
-                        <img src="LCD_module.04a8cc1f.png" alt="LCD Module" style="max-width: 250px; height: 250px;">
+                        <figcaption>1. LCD Module</figcaption>
+                        <img src="LCD_module.04a8cc1f.png" alt="LCD Module" style="max-width: 250px; height: auto;">
                     </figure>
                     <figure>
-                        <figcaption>2.Arduino Uno</figcaption>
-                        <img src="Arduino Uno.png" alt="Arduino" style="max-width: 300px; height: 200px;">
+                        <figcaption>2. Arduino Uno</figcaption>
+                        <img src="Arduino Uno.png" alt="Arduino" style="max-width: 300px; height: auto;">
                     </figure>
                     <figure>
-                        <figcaption>3.4x4 Keypad Matrix</figcaption>
-                        <img src="Keypad.png" alt="Keypad" style="max-width: 400px; height: 350px;">
+                        <figcaption>3. 4x4 Keypad Matrix</figcaption>
+                        <img src="Keypad.png" alt="Keypad" style="max-width: 400px; height: auto;">
                     </figure>
                     <figure>
-                        <figcaption>4.Servo Motor</figcaption>
-                        <img src="Servo.png" alt="Servo" style="max-width: 350px; height: 250px;">
+                        <figcaption>4. Servo Motor</figcaption>
+                        <img src="Servo.png" alt="Servo" style="max-width: 350px; height: auto;">
                     </figure>
                 </div>
             </div>
@@ -167,17 +184,17 @@
             </div>
         </div>
 
-
-        <div class="card" id="รูปproject">
+        <div class="card" id="project-images">
             <div class="section">
-                <div class="section-title">รูปproject</div>
+                <div class="section-title">รูป Project</div>
                 <div class="section-content">
                     <figure>
-                        <img src="IMG_2656.jpg" alt="LCD Module" style="max-width: 500px; height: 500px; transform: rotate(-90deg); display: block; margin: 0 auto;">
+                        <img src="IMG_2656.jpg" alt="Project Image" style="max-width: 500px; height: auto; transform: rotate(-90deg); display: block; margin: 0 auto;">
                     </figure>
                 </div>
             </div>
         </div>
+
         <div class="card" id="source-code">
             <div class="section">
                 <div class="section-title">Source Code</div>
@@ -340,9 +357,9 @@
             <div class="section">
                 <div class="section-title">สมาชิกผู้จัดทำ</div>
                 <div class="section-content">
-                    1.นาย กิตติพิชญ์ เพ็งแจ่ม รหัสประจําตัว 66070240 หน้าที เขียนโค้ด, หาจุดผิดพลาด
-                    <br>2.นาย ธิเบศ สว่างการ รหัสประจําตัว 66070272 หน้าที ต่ออุปรณ์, ทดสอบการทำงาน
-                    <br>3.นาย ธนาธิป ช่างเจรจา รหัสประจําตัว 66070268 หน้าที หาอุปกรณ์, เขียนโค้ด
+                    1.นาย กิตติพิชญ์ เพ็งแจ่ม รหัสประจําตัว 66070240 หน้าที ต่ออุปรณ์, ทดสอบการทำงาน, ตัดต่อคลิป
+                    <br>2.นาย ธิเบศ สว่างการ รหัสประจําตัว 66070272 หน้าที เขียนโค้ด, หาจุดผิดพลาด, เขียนเว็บ
+                    <br>3.นาย ธนาธิป ช่างเจรจา รหัสประจําตัว 66070268 หน้าที หาอุปกรณ์, เขียนโค้ด, ทำโปรเตอร์
                 </div>
             </div>
         </div>
@@ -355,7 +372,7 @@
         <button onclick="scrollToSection('abstract')">บทคัดย่อ</button>
         <button onclick="scrollToSection('equipment')">อุปกรณ์</button>
         <button onclick="scrollToSection('functions')">ฟังก์ชันหลัก</button>
-        <button onclick="scrollToSection('รูปproject')">รูปproject</button>
+        <button onclick="scrollToSection('project-images')">รูปproject</button>
         <button onclick="scrollToSection('source-code')">Source Code</button>
         <button onclick="scrollToSection('members')">สมาชิกผู้จัดทำ</button>
 
